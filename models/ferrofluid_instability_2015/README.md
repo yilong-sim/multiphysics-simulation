@@ -3,6 +3,8 @@
 **Publication:** Thanjavur Kumar D., Zhou Y. et al., *Microfluidics and Nanofluidics* 19, 43–52 (2015)  
 DOI: [10.1007/s10404-015-1546-8](https://doi.org/10.1007/s10404-015-1546-8)
 
+> **Part 1 of 2** — This paper establishes the phenomenon and provides the experimental baseline. The regular 2D model correctly captures trends but under-predicts threshold electric fields by 2–3×, motivating the depth-averaged model in [Part 2](../ferrofluid_instability_2017/README.md).
+
 ---
 
 ## Problem
@@ -13,7 +15,7 @@ At sufficient electric field strength, the interface transitions from stable dif
 
 ---
 
-## Instability progression (experimental)
+## Instability Progression (Experimental)
 
 ![Experimental instability time series](../../assets/figures/ferrofluid_instability_sequence.png)
 
@@ -47,6 +49,19 @@ $$\sigma = c\sigma_f + (1-c)\sigma_w, \qquad \mu = \mu_f \, e^{\ln(\mu_w/\mu_f)(
 
 ---
 
+## Parameters
+
+| Symbol | Value | Description |
+|---|---|---|
+| σ_w | 2.95 × 10⁻³ S/m | Water electric conductivity |
+| σ_f | 5.324 × 10⁻¹ S/m | 1× ferrofluid conductivity |
+| µ_w | 1 × 10⁻³ Pa·s | Water viscosity |
+| µ_f | 2 × 10⁻³ Pa·s | 1× ferrofluid viscosity |
+| ζ | −0.1 V | Wall zeta potential |
+| D | 1 × 10⁻⁹ m²/s | Ferrofluid diffusivity (model) |
+
+---
+
 ## Key Results
 
 | Ferrofluid concentration | Experimental threshold |
@@ -55,6 +70,14 @@ $$\sigma = c\sigma_f + (1-c)\sigma_w, \qquad \mu = \mu_f \, e^{\ln(\mu_w/\mu_f)(
 | 0.2× | 177.8 V/cm |
 | 0.3× | 169.4 V/cm |
 
-Threshold decreases with increasing ferrofluid concentration — higher σ_f increases the conductivity ratio and the destabilizing free charge density.
+Threshold decreases with increasing ferrofluid concentration — higher σ_f increases the conductivity ratio and hence the destabilizing free charge density at the interface.
 
-The regular 2D model predicts the decreasing trend correctly but under-predicts all thresholds by 2–3×. This systematic error, traced to the neglect of top/bottom wall stabilizing effects, motivated the depth-averaged model in the follow-on *Scientific Reports* paper.
+The regular 2D model predicts this decreasing trend correctly but under-predicts all threshold values by 2–3×. This systematic error is traced to the neglect of top/bottom wall stabilizing effects — the walls suppress instability by adding viscous drag, which the 2D model ignores entirely.
+
+---
+
+## Why the Model Falls Short — and What Comes Next
+
+The regular 2D model assumes infinite channel depth, so the top and bottom walls play no role. In reality, viscous drag from those walls damps the instability, requiring a stronger electric field to overcome it. The 2D model therefore goes unstable too easily.
+
+The fix — a nonlinear depth-averaged model that recovers these wall effects through an additional correction term derived by asymptotic analysis — is developed and validated in [Part 2](../ferrofluid_instability_2017/README.md).

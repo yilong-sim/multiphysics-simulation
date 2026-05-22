@@ -3,34 +3,40 @@
 ```
 assets/
 ├── figures/
-│   ├── depth_averaging_concept.svg          ← original schematic (not in any paper)
+│   ├── depth_averaging_concept.png          ← schematic (not in any paper)
 │   ├── joule_heating_6panel.png             ← Fig 4, Electrophoresis 2017
 │   ├── ferrofluid_instability_sequence.png  ← Fig 6, Microfluid. Nanofluid. 2015
-│   ├── ferrofluid_2017/
-│   │   ├── depthavg_138V.png                ← depth-averaged, 138.9 V/cm
-│   │   ├── depthavg_202V.png                ← depth-averaged, 202.1 V/cm (threshold)
-│   │   └── depthavg_277V.png                ← depth-averaged, 277.8 V/cm
-│   └── iceo_particle_comparison.png         ← Fig 2, Phys. Fluids 2017
+│   ├── iceo_particle_comparison.png         ← Fig 2, Phys. Fluids 2017
+│   └── ferrofluid_2017/
+│       ├── depthavg_138V.png                ← Fig 1b (bottom), Sci. Rep. 2017
+│       ├── depthavg_202V.png                ← Fig 1b (middle), Sci. Rep. 2017
+│       └── depthavg_277V.png                ← Fig 1b (top), Sci. Rep. 2017
 │
 └── videos/
     ├── exp_138V.gif     ← experiment, 138.9 V/cm (stable)
     ├── exp_175V.gif     ← experiment, 175.0 V/cm (threshold)
     ├── exp_277V.gif     ← experiment, 277.8 V/cm (chaotic)
-    ├── 2d_50V.gif       ← regular 2D, 50 V/cm
+    ├── 2d_50V.gif       ← regular 2D, ~50 V/cm (stable)
     ├── 2d_60V.gif       ← regular 2D, 60.4 V/cm (2D threshold)
-    └── 2d_110V.gif      ← regular 2D, 110 V/cm
+    └── 2d_110V.gif      ← regular 2D, ~110 V/cm (chaotic)
 ```
+
+---
 
 ## Extracting figures from papers
 
-Export directly from your paper PDFs using the snapshot/crop tool at 150+ dpi as PNG. All figures are your own work.
+Export directly from your paper PDFs at 150+ dpi as PNG. All figures are your own work.
 
 | File | Source |
 |---|---|
 | `joule_heating_6panel.png` | Fig 4, *Electrophoresis* 2017 |
 | `ferrofluid_instability_sequence.png` | Fig 6, *Microfluid. Nanofluid.* 2015 |
-| `ferrofluid_2017/depthavg_*.png` | Fig 1b panels, *Sci. Rep.* 2017 |
 | `iceo_particle_comparison.png` | Fig 2, *Phys. Fluids* 2017 |
+| `ferrofluid_2017/depthavg_138V.png` | Fig 1b bottom panel, *Sci. Rep.* 2017 |
+| `ferrofluid_2017/depthavg_202V.png` | Fig 1b middle panel, *Sci. Rep.* 2017 |
+| `ferrofluid_2017/depthavg_277V.png` | Fig 1b top panel, *Sci. Rep.* 2017 |
+
+---
 
 ## Converting videos to GIF
 
