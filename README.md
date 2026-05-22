@@ -2,7 +2,7 @@
 
 **Reduced-order modeling of coupled transport phenomena in shallow PDMS microchannels**
 
-*Yilong Zhou at Clemson University*
+*Yilong Zhou*
 
 ---
 
