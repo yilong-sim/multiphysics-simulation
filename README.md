@@ -2,13 +2,13 @@
 
 **Reduced-order modeling of coupled transport phenomena in shallow PDMS microchannels**
 
-*Yilong Zhou — Clemson University (PhD research)*
+*Yilong Zhou at Clemson University*
 
 ---
 
 ## Overview
 
-This repository documents four coupled-physics simulation projects from my PhD work on electrokinetic microfluidics. The unifying contribution is a **2D depth-averaged numerical model** derived from a second-order asymptotic analysis of the full 3D governing equations — enabling accurate, computationally efficient simulation of coupled electric, thermal, flow, and species transport in shallow microchannels.
+This repository documents four coupled-physics simulation projects from my work on electrokinetic microfluidics. The unifying contribution is a **2D depth-averaged numerical model** derived from a second-order asymptotic analysis of the full 3D governing equations — enabling accurate, computationally efficient simulation of coupled electric, thermal, flow, and species transport in shallow microchannels.
 
 The core question each project addresses: *how does a physical effect change fluid behavior at a reservoir-microchannel junction, and can a reduced-order model capture it accurately enough to be useful?*
 
@@ -36,9 +36,9 @@ Full derivation including the temperature equation, ICEO dual-domain electric fi
 
 | # | Physical effect | Publication | My role |
 |---|---|---|---|
-| 1 | Conductivity mismatch → electrokinetic instability in ferrofluid | *Microfluid. Nanofluid.* 2015 + *Sci. Rep.* 2017 | Simulation + **all experiments** |
-| 2 | Joule heating → electrothermal vortices at channel entrance | *Electrophoresis* 2017 | Derived depth-avg model; COMSOL simulation |
-| 3 | Induced charge → ICEO vortices at dielectric corners | *Phys. Fluids* 2017 | Derived depth-avg model; COMSOL simulation |
+| 1 | Conductivity mismatch → electrokinetic instability in ferrofluid | *Microfluid. Nanofluid.* 2015 + *Sci. Rep.* 2017 | Simulation (joint) + **all experiments** |
+| 2 | Joule heating → electrothermal vortices at channel entrance | *Electrophoresis* 2017 | Derived depth-avg model; COMSOL simulation (joint) |
+| 3 | Induced charge → ICEO vortices at dielectric corners | *Phys. Fluids* 2017 | Derived depth-avg model; COMSOL simulation (joint) |
 
 ---
 
@@ -158,7 +158,5 @@ multiphysics-simulation/
 ---
 
 ## Related
-
-Cross-scale simulation spanning quantum → atomistic → continuum: [yilong-sim/cross-scale-simulation](https://github.com/yilong-sim/cross-scale-simulation)
 
 Portfolio: [yilong-sim.github.io](https://yilong-sim.github.io)
