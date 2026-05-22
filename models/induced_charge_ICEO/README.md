@@ -46,7 +46,9 @@ $$\bar{\phi}_w - \bar{\phi}_f = \zeta_i + \zeta_w, \qquad \nabla_H \bar{\phi}_f 
 $$0 = -\nabla_H \bar{p} + \eta \nabla_H^2 \bar{\mathbf{u}} - \frac{3\eta}{d^2}(\bar{\mathbf{u}} - \bar{\mathbf{u}}_{slip})$$
 
 **Slip velocity (equilibrium + induced components):**
-$$\bar{\mathbf{u}}_{slip} \cdot \mathbf{t} = -\frac{\varepsilon_0\varepsilon_f}{\eta}\left(\zeta_{i,DC}\nabla_H\bar{\phi}_{f,DC} + \zeta_w\nabla_H\bar{\phi}_{f,DC} + \zeta_{i,AC}\nabla_H\bar{\phi}_{f,AC}\right) \cdot \mathbf{t}$$
+
+$$\bar{u}_{slip} \cdot t = -\frac{\varepsilon_0\varepsilon_f}{\eta}
+\left(\zeta_{i,DC}\nabla_H\bar{\phi}_{f,DC} + \zeta_w\nabla_H\bar{\phi}_{f,DC} + \zeta_{i,AC}\nabla_H\bar{\phi}_{f,AC}\right) \cdot t$$
 
 The key extension over prior ICEO models: solving Laplace's equation in both fluid and wall simultaneously, coupled through the Robin BC. The wall subdomain was not included in any previous 2D ICEO model — it was simply assumed insulating with no field leakage.
 
