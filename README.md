@@ -2,7 +2,7 @@
 
 **Reduced-order modeling of coupled transport phenomena in shallow PDMS microchannels**
 
-*Yilong Zhou at Clemson University*
+*Yilong Zhou — Clemson University (PhD research)*
 
 ---
 
@@ -57,9 +57,11 @@ Ferrofluid and DI water co-flow through a T-shaped microchannel. Their ~180× el
 | Experiment | Regular 2D model | Depth-averaged model |
 |:---:|:---:|:---:|
 | ![Experiment at 175 V/cm](assets/videos/exp_175V.gif) | ![Regular 2D at 60 V/cm](assets/videos/2d_60V.gif) | ![Depth-averaged at 202 V/cm](assets/figures/ferrofluid_2017/depthavg_202V.png) |
-| 175.0 V/cm — periodic waves | Chaotic already at 60.4 V/cm ✗ | Periodic waves at 202.1 V/cm (+15.5%) ✓ |
+| 175.0 V/cm — periodic waves, **inclined upstream ←** | Chaotic at 60.4 V/cm; waves **inclined downstream →** ✗ | Periodic waves at 202.1 V/cm; **inclined upstream ←** ✓ |
 
-The regular 2D simulation must be run at a much lower electric field because the model goes chaotic far too early. The labels show the actual field used in each simulation.
+The depth-averaged model captures two independent failure modes of the regular 2D model: the wrong threshold electric field (60.4 vs 175.0 V/cm) **and** the wrong wave inclination direction. The regular 2D model predicts waves tilted downstream because it over-predicts electroosmotic velocity in the ferrofluid — a direct consequence of ignoring top/bottom wall drag. The depth-averaged model corrects both simultaneously.
+
+> The regular 2D simulation is run at a lower electric field than the experiment because the model triggers instability far too early. Labels show the actual field used in each simulation.
 
 **Quantitative summary (0.2× ferrofluid):**
 

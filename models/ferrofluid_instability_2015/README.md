@@ -3,7 +3,7 @@
 **Publication:** Thanjavur Kumar D., Zhou Y. et al., *Microfluidics and Nanofluidics* 19, 43–52 (2015)  
 DOI: [10.1007/s10404-015-1546-8](https://doi.org/10.1007/s10404-015-1546-8)
 
-> **Part 1 of 2** — This paper establishes the phenomenon and provides the experimental baseline. The regular 2D model correctly captures trends but under-predicts threshold electric fields by 2–3×, motivating the depth-averaged model in [Part 2](../ferrofluid_instability_2017/README.md).
+> **Part 1 of 2** — This paper establishes the phenomenon and provides the experimental baseline. The regular 2D model correctly captures trends but fails in two independent ways: it under-predicts threshold electric fields by 2–3×, and predicts instability waves inclined in the wrong direction. Both are fixed by the depth-averaged model in [Part 2](../ferrofluid_instability_2017/README.md).
 
 ---
 
@@ -70,14 +70,16 @@ $$\sigma = c\sigma_f + (1-c)\sigma_w, \qquad \mu = \mu_f \, e^{\ln(\mu_w/\mu_f)(
 | 0.2× | 177.8 V/cm |
 | 0.3× | 169.4 V/cm |
 
-Threshold decreases with increasing ferrofluid concentration — higher σ_f increases the conductivity ratio and hence the destabilizing free charge density at the interface.
-
-The regular 2D model predicts this decreasing trend correctly but under-predicts all threshold values by 2–3×. This systematic error is traced to the neglect of top/bottom wall stabilizing effects — the walls suppress instability by adding viscous drag, which the 2D model ignores entirely.
+Threshold decreases with increasing ferrofluid concentration — higher σ_f increases the conductivity ratio and hence the destabilizing free charge density at the interface. The regular 2D model predicts this decreasing trend correctly.
 
 ---
 
 ## Why the Model Falls Short — and What Comes Next
 
-The regular 2D model assumes infinite channel depth, so the top and bottom walls play no role. In reality, viscous drag from those walls damps the instability, requiring a stronger electric field to overcome it. The 2D model therefore goes unstable too easily.
+The regular 2D model fails in two independent ways, both traceable to the same root cause: ignoring top/bottom wall effects.
 
-The fix — a nonlinear depth-averaged model that recovers these wall effects through an additional correction term derived by asymptotic analysis — is developed and validated in [Part 2](../ferrofluid_instability_2017/README.md).
+**1. Wrong threshold electric field.** The model under-predicts threshold electric fields by 2–3× for all tested conditions. The top and bottom walls damp instability by adding viscous drag; without this resistance, the model goes unstable too easily.
+
+**2. Wrong wave inclination direction.** Experimental instability waves are inclined upstream (←). The regular 2D model predicts waves inclined downstream (→). This happens because the model over-predicts electroosmotic velocity in the ferrofluid — a direct consequence of ignoring top/bottom wall drag — which causes the waves to be convected too strongly in the flow direction.
+
+The fix — a nonlinear depth-averaged model that recovers both wall drag and electroosmotic slip from the top/bottom surfaces through a correction term derived by asymptotic analysis — is developed and validated in [Part 2](../ferrofluid_instability_2017/README.md).

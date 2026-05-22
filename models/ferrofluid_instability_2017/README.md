@@ -3,21 +3,22 @@
 **Publication:** Song L., Yu L., Zhou Y. et al., *Scientific Reports* 7, 46510 (2017)  
 DOI: [10.1038/srep46510](https://doi.org/10.1038/srep46510)
 
-> **Part 2 of 2** — Builds on [Part 1](../ferrofluid_instability_2015/README.md), which established the phenomenon and identified the 2–3× under-prediction of threshold electric fields in the regular 2D model. This paper develops the nonlinear depth-averaged model that fixes it.
+> **Part 2 of 2** — Builds on [Part 1](../ferrofluid_instability_2015/README.md), which established the phenomenon and identified two independent failures of the regular 2D model: wrong threshold electric field and wrong wave inclination direction. This paper develops the nonlinear depth-averaged model that fixes both simultaneously.
 
 ---
 
 ## Problem
 
-The regular 2D model in Part 1 systematically under-predicted threshold electric fields because it ignored the stabilizing influence of the top and bottom channel walls. The wall correction term −3μ**U**/d² in the depth-averaged momentum equation raises the effective viscous damping, requiring a stronger electric field to trigger instability. Without it, the model predicts instability too easily.
+The regular 2D model in Part 1 failed in two ways because it ignored the stabilizing influence of the top and bottom channel walls:
 
-This paper develops the nonlinear depth-averaged model and validates it across four channel depths (32–100 µm) and three ferrofluid concentrations, confirming both the instability patterns and the threshold fields.
+1. **Wrong threshold** — under-predicted by 2–3× because wall drag was absent, making the model go unstable too easily
+2. **Wrong wave direction** — predicted waves inclined downstream (→) rather than upstream (←) because over-predicted electroosmotic velocity convected the waves too strongly in the flow direction
+
+The wall correction term $-3\mu\mathbf{U}/d^2$ in the depth-averaged momentum equation addresses both: it increases effective viscous damping (fixing the threshold) and reduces net flow velocity (fixing the wave inclination).
 
 ---
 
 ## Three-Way Comparison
-
-The table below shows experiment, regular 2D, and depth-averaged results at matched conditions. Experiment and regular 2D columns are animated GIFs from video recordings; depth-averaged column shows static COMSOL output figures.
 
 ### 138.9 V/cm — stable co-flow (below threshold)
 
@@ -31,7 +32,9 @@ The table below shows experiment, regular 2D, and depth-averaged results at matc
 | Experiment | Regular 2D model | Depth-averaged model |
 |:---:|:---:|:---:|
 | ![Experiment 175V](../../assets/videos/exp_175V.gif) | ![Regular 2D 60V](../../assets/videos/2d_60V.gif) | ![Depth-avg 202V](../../assets/figures/ferrofluid_2017/depthavg_202V.png) |
-| Periodic waves, upstream inclined | Chaotic already at 60.4 V/cm ✗ | Periodic waves at 202.1 V/cm (+15.5%) ✓ |
+| 175.0 V/cm — periodic waves, **inclined upstream ←** | Chaotic at 60.4 V/cm; waves **inclined downstream →** ✗ | Periodic waves at 202.1 V/cm; **inclined upstream ←** ✓ |
+
+The depth-averaged model captures two independent failure modes of the regular 2D model simultaneously: the wrong threshold electric field (60.4 vs 175.0 V/cm) **and** the wrong wave inclination direction. The regular 2D model predicts waves tilted downstream because it over-predicts electroosmotic velocity in the ferrofluid — a direct consequence of ignoring top/bottom wall drag. The depth-averaged model corrects both with a single physically derived correction term.
 
 ### 277.8 V/cm — chaotic flow
 
@@ -105,7 +108,7 @@ The depth-averaged model over-predicts in deeper channels because the δ = d/H �
 ## COMSOL Implementation
 
 Additional depth-averaged terms were added via:
-- **Momentum wall correction** (−3μ**U**/d²): COMSOL "Force" feature in the Laminar Flow module
+- **Momentum wall correction** ($-3\mu\mathbf{U}/d^2$): COMSOL "Force" feature in the Laminar Flow module
 - **Taylor dispersion correction**: COMSOL "Reaction" feature in the Transport of Diluted Species module
 
 Mesh: structured 4 µm square elements throughout branches; triangular elements at T-junction fillets.
