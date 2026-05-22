@@ -189,7 +189,7 @@ where $\mathbf{U} = \mathbf{u} - \varepsilon(\zeta' + \zeta'')/2\mu \cdot \mathb
 | Electric field (conducting fluid) | All four | $\nabla \cdot (\bar{\sigma}\nabla\bar{\phi}) = 0$ |
 | Electric field (ICEO, fluid + wall) | Phys. Fluids 2017 | $\nabla^2\bar{\phi}_f = 0$, $\nabla^2\bar{\phi}_w = 0$ |
 | Temperature | Electrophoresis 2017 | $k\nabla^2\bar{T} + Q_J = (\bar{T}-T_\infty)(R_{us}^{-1}+R_{ls}^{-1})/d_{ch}$ |
-| Momentum | All four | $0 = -\nabla\bar{p} + \eta\nabla^2\bar{\mathbf{u}} + \mathbf{f}_e - 3\eta(\bar{\mathbf{u}}-\bar{\mathbf{u}}_{slip})/d^2$ |
+| Momentum | All four | $0 = -\nabla_H\bar{p} + \eta\nabla_H^2\bar{\mathbf{u}} + \mathbf{f}_e - 3\eta(\bar{\mathbf{u}}-\bar{\mathbf{u}}_{slip})/d^2$ |
 | Continuity | All four | $\nabla \cdot \bar{\mathbf{u}} = 0$ |
 | Concentration | Sci. Rep. 2017 | $\partial_t c + \mathbf{u}\cdot\nabla c = D\nabla^2 c + (2d^2/105D)\nabla\cdot[\mathbf{U}(\mathbf{U}\cdot\nabla c)]$ |
 
