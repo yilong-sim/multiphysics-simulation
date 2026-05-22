@@ -36,9 +36,9 @@ Full derivation including the temperature equation, ICEO dual-domain electric fi
 
 | # | Physical effect | Publication | My role |
 |---|---|---|---|
-| 1 | Conductivity mismatch → electrokinetic instability in ferrofluid | *Microfluid. Nanofluid.* 2015 + *Sci. Rep.* 2017 | Simulation (joint) + **all experiments** |
-| 2 | Joule heating → electrothermal vortices at channel entrance | *Electrophoresis* 2017 | Derived depth-avg model; COMSOL simulation (joint) |
-| 3 | Induced charge → ICEO vortices at dielectric corners | *Phys. Fluids* 2017 | Derived depth-avg model; COMSOL simulation (joint) |
+| 1 | Conductivity mismatch → electrokinetic instability in ferrofluid | *Microfluid. Nanofluid.* 2015 + *Sci. Rep.* 2017 | **Derived depth-avg model**; **all experiments**; Simulation (joint) |
+| 2 | Joule heating → electrothermal vortices at channel entrance | *Electrophoresis* 2017 | **Derived depth-avg model**; COMSOL simulation (joint) |
+| 3 | Induced charge → ICEO vortices at dielectric corners | *Phys. Fluids* 2017 | **Derived depth-avg model**; COMSOL simulation (joint) |
 
 ---
 
