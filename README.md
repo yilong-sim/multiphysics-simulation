@@ -125,7 +125,7 @@ multiphysics-simulation/
 │   └── induced_charge_ICEO/
 │       └── README.md                     ← dual-domain E field, ICEO, DEP tracing
 └── assets/
-    ├── README.md                         ← directory guide + ffmpeg GIF commands
+    ├── README.md                       
     ├── figures/
     └── videos/
 ```
