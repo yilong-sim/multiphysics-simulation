@@ -34,9 +34,11 @@ $$\nabla_H \cdot (\sigma \mathbf{E}_{DC}) = 0$$
 $$0 = k\nabla_H^2 T + \sigma E_{DC}^2(1 + r^2) - \frac{T - T_\infty}{d_{ch}}\left(\frac{1}{R_{us}} + \frac{1}{R_{ls}}\right)$$
 
 **Flow** (Stokes with electrothermal body force and wall correction):
+
 $$0 = -\nabla_H p + \nabla_H \cdot (\eta \nabla_H \mathbf{u}) + \mathbf{f}_e - \frac{3(\eta\mathbf{u} + \varepsilon\zeta_w \mathbf{E}_{DC})}{d_{ch}^2}$$
 
 **Particle tracing** (fluid velocity + electrophoresis):
+
 $$\mathbf{U}_P = \mathbf{u} + \frac{\varepsilon\zeta_p}{\eta}\mathbf{E}_{DC}$$
 
 The thermal resistance terms R_us (upper substrate: PDMS slab + natural convection) and R_ls (lower substrate: PDMS film + glass slide) replace the unrealistic h → ∞ assumption of prior 2D models. See [theory/depth_averaging_derivation.md](../../theory/depth_averaging_derivation.md) for the derivation.
